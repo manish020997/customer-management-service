@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banking Application - Customer Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Customer Management Service</h1>
+
+    <!-- Create Customer -->
+    <div class="card">
+        <h2>Create Customer</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="age" placeholder="Age">
+        <input type="text" id="address" placeholder="Address">
+        <input type="email" id="emailId" placeholder="Email">
+        <input type="text" id="phoneNumber" placeholder="Phone Number">
+        <button onclick="createCustomer()">Create Customer</button>
+    </div>
+
+    <!-- Fetch Single Customer -->
+    <div class="card">
+        <h2>Fetch Customer By ID</h2>
+        <input type="number" id="fetchId" placeholder="Customer ID">
+        <button onclick="fetchCustomer()">Fetch</button>
+        <pre id="singleCustomer"></pre>
+    </div>
+
+    <!-- Update Customer -->
+    <div class="card">
+        <h2>Update Customer</h2>
+        <input type="number" id="updateId" placeholder="Customer ID">
+        <input type="text" id="updateName" placeholder="Name">
+        <input type="number" id="updateAge" placeholder="Age">
+        <input type="text" id="updateAddress" placeholder="Address">
+        <input type="email" id="updateEmailId" placeholder="Email">
+        <input type="text" id="updatePhoneNumber" placeholder="Phone Number">
+        <button onclick="updateCustomer()">Update Customer</button>
+    </div>
+
+    <!-- Delete Customer -->
+    <div class="card">
+        <h2>Delete Customer</h2>
+        <input type="number" id="deleteId" placeholder="Customer ID">
+        <button class="delete-btn" onclick="deleteCustomer()">Delete</button>
+    </div>
+
+    <!-- Fetch All Customers -->
+    <div class="card">
+        <h2>All Customers</h2>
+        <button onclick="fetchAllCustomers()">Load All Customers</button>
+        <div id="customerList"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
